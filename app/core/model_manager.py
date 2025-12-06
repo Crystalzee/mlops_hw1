@@ -3,6 +3,7 @@ import pickle
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from app.core.logger import logger
+from app.core.minio_client import upload_file
 
 AVAILABLE_MODELS = {
     "logreg": LogisticRegression,
@@ -23,6 +24,7 @@ def train_model(model_name: str, X, y, params: dict | None = None):
     model_path = os.path.join(MODELS_DIR, f"{model_name}.pkl")
     with open(model_path, "wb") as f:
         pickle.dump(model, f)
+    upload_file(model_path, f"models/{model_name}.pkl")
 
     logger.info(f"Model {model_name} trained and saved.")
     return model_name

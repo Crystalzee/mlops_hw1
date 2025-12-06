@@ -5,7 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/../MLOPS/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/../MLOPS/.venv1" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (MLOPS)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 (MLOPS)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
